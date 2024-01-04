@@ -33,8 +33,8 @@ class TractorServiceTest {
         tractorCommand.setCommands(List.of(Command.A));
         tractorCommand.setPosition(new Position(0, 0, CardinalPosition.N));
         var finalPosition = tractorService.moveTractor(tractorCommand);
-        Assertions.assertEquals(1, finalPosition.getX());
-        Assertions.assertEquals(0, finalPosition.getY());
+        Assertions.assertEquals(0, finalPosition.getX());
+        Assertions.assertEquals(1, finalPosition.getY());
         Assertions.assertEquals(CardinalPosition.N, finalPosition.getCardinalPosition());
     }
 

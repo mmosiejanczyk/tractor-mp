@@ -23,18 +23,18 @@ public class Position {
             throw new InvalidPositionException("Initial position is malformed");
         }
         try {
-            this.x = Integer.parseInt(splitPositions[0]);
+            this.x = Integer.parseInt(splitPositions[0].trim());
         } catch (NumberFormatException numberFormatException) {
             throw new InvalidPositionException("X position %s is invalid".formatted(splitPositions[0]));
         }
         try {
-            this.y = Integer.parseInt(splitPositions[1]);
+            this.y = Integer.parseInt(splitPositions[1].trim());
         } catch (NumberFormatException numberFormatException) {
             throw new InvalidPositionException("Y position %s is invalid".formatted(splitPositions[1]));
         }
 
         try {
-            this.cardinalPosition = CardinalPosition.valueOf(splitPositions[2]);
+            this.cardinalPosition = CardinalPosition.valueOf(splitPositions[2].trim());
         } catch (IllegalArgumentException illegalArgumentException) {
             throw new InvalidPositionException("Cardinal position %s is invalid".formatted(splitPositions[2]));
         }

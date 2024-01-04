@@ -11,10 +11,10 @@ import lombok.experimental.FieldDefaults;
 @Getter
 public enum CardinalPosition {
 
-    O(0, -1),
-    N(1, 0),
-    E(0, 1),
-    S(-1, 0);
+    O(-1, 0),
+    N(0, 1),
+    E(1, 0),
+    S(0, -1);
 
     static {
         var cardinalPositions = values();
